@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <script src="/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="/js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <link rel="stylesheet" href="/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <form id="userForm" class="form-inlien">
+        <div class="form-group">
+            <input name="userId" id="id" type="hidden">
+            <div class="col-xs-6">
+                <label for="xm" class="col-sm-4 control-label">姓名</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="xm" name="userName">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <label for="pwd" class="col-sm-4 control-label">密码</label>
+                <div class="radio">
+                    <input type="text" class="form-control" id="pwd" name="userPwd">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <label for="date" class="col-sm-4 control-label">日期</label>
+                <div class="radio">
+                    <input type="text" class="form-control date" name="createTime" id="date">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script type="text/javascript">
+    $('.date').datetimepicker({
+        language: 'zh-CN',//显示中文
+        format: 'yyyy-mm-dd',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),//初始化当前日期
+        autoclose: true,//选中自动关闭
+        todayBtn: true//显示今日按钮
+    });
+</script>
+</html>

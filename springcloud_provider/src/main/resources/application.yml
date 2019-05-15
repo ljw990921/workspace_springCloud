@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///1810a?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: service-hi02
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
